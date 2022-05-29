@@ -1,0 +1,17 @@
+- Currently only supports binary operators. That is, (1+2)+3 or 1+(2+3), not 1+2+3. 
+- Stringification of expression has too many brackets. 
+- The current logic for delegating evaluation to subexpressions of an operator is a bit overloaded
+  - General method for iterating/modifying subexpressions of an operator is needed
+  - Use reflection?
+- When evaluating subexpression, the surrounding expression disappears
+  - e.g. when (1+2)+3 evaluates to 3+3, only 1+2 -> 3 shows
+  - Use Lens
+- The `for` loop looks very dirty as of now
+  - Need to use `substeps` and `for` together and have two nested loops, which is essentially one
+- There should be two levels of faliure
+  - A failure where a different method can work
+  - A `Fatal` failure like division by zero, where we should abort the calculation immediately
+- Support negation
+- Support multiplication by zero
+  - One caveat is that expressions like `0 * (3 / (1-1))` cannot be evaluated
+  - Add a silent solution that only checks for `Fatal` failure
