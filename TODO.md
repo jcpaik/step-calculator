@@ -1,5 +1,5 @@
 - Currently only supports binary operators. That is, (1+2)+3 or 1+(2+3), not 1+2+3. 
-- Stringification of expression has too many brackets. 
+- Stringification of expression has too many brackets - get rid of them algorithmically.
 - The current logic for delegating evaluation to subexpressions of an operator is a bit overloaded
   - General method for iterating/modifying subexpressions of an operator is needed
   - Use reflection?

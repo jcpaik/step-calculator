@@ -1,5 +1,12 @@
-### Usage
-Type `scala` and enter `:load calc.scala` in console to run the script.
+## Description
+
+A simple proof-of-concept Scala implementation of a step-by-step expression calculator (e.g. Photomath)
+- Written in only pure functions
+- Uses monad / for-comprehension pattern to compose steps and handle errors
+- Takes advantage of pattern matching to check preconditions and at the same time
+
+### How to run
+Install scala. Type `scala` and enter `:load calc.scala` in console to run the script.
 ```
 > scala
 Welcome to Scala 3.1.1 (17.0.2, Java Java HotSpot(TM) 64-Bit Server VM).
